@@ -1,0 +1,14 @@
+[Unit]
+Description=Simple Node HTTP Service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+EnvironmentFile=-/etc/simple-node/config.env
+ExecStart=/usr/bin/node /opt/simple-node/server.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
