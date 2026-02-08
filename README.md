@@ -12,6 +12,17 @@ This project demonstrates:
 
 ---
 
+## 🚀 Installation methods
+
+You can run this service in **two ways**:
+
+1. Install as a **native RPM package**
+2. Run as a **container using Podman**
+
+Choose the method that fits your environment.
+
+## 🧩 Method 1: Install via RPM (native system service)
+
 ## 📦 Requirements
 
 Node.js **must be installed on the system** before installing this RPM.
@@ -62,3 +73,34 @@ OK
 # Remove
 ```bash
 sudo rpm -e simple-node-http  
+
+## 🧩 Method  2: Run via Podman container
+Requirements
+```bash
+sudo dnf install -y podman
+```
+
+##🧩  Build container image
+```bash
+podman build -t simple-node-http .
+```
+## 🧩  Run container
+```bash
+podman run -p 3000:3000 simple-node-http
+```
+##🧩   test
+``` bash
+podman run -p 3000:3000 simple-node-http
+```
+
+simple-node-http-RPM-/
+├── Containerfile
+├── README.md
+├── requirements.txt
+├── SOURCES/
+│   ├── server.js
+│   ├── simple-node.service
+│   └── config.env
+├── SPECS/
+│   └── simple-node-http.spec
+
