@@ -74,7 +74,7 @@ OK
 ```bash
 sudo rpm -e simple-node-http  
 ```
- 🧩 Method  2: Run via Podman container
+# Method  2: Run via Podman container
 Requirements
 ```bash
 sudo dnf install -y podman
